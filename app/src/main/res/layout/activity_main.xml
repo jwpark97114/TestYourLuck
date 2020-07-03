@@ -29,6 +29,13 @@
         android:layout_marginTop="15dp"
         android:text="제비뽑기"/>
 
+    <Button
+        android:id="@+id/rcpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="컴퓨터와 가위바위보"/>
+
 
 
 </LinearLayout>
