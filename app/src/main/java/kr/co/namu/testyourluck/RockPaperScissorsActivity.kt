@@ -31,5 +31,29 @@ class RockPaperScissorsActivity : AppCompatActivity() {
 
         }
 
+        rockBtn.setOnClickListener {
+
+//            0부터 2까지 하나를 랜덤으로 추출 ()
+            val randomNum = (Math.random() * 3).toInt()
+
+            val thisTimePick = imgList[randomNum]
+
+//            랜덤으로 뽑힌 그림 띄워주기
+            cpuImg.setImageResource(thisTimePick)
+
+        }
+
+        paperBtn.setOnClickListener {
+
+//            0부터 2까지 하나를 랜덤으로 추출 ()
+            val randomNum = (Math.random() * 3).toInt()
+
+            val thisTimePick = imgList[randomNum]
+
+//            랜덤으로 뽑힌 그림 띄워주기
+            cpuImg.setImageResource(thisTimePick)
+
+        }
+
     }
 }
