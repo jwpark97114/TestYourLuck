@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this,LotsActivity::class.java)
             startActivity(myIntent)
         }
+        rpsBtn.setOnClickListener {
+            val myIntent = Intent(this,RockPaperScissorsActivity::class.java)
+            startActivity(myIntent)
+        }
     }
 }
