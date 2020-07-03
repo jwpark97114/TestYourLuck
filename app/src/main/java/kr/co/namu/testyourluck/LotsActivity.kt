@@ -144,7 +144,7 @@ class LotsActivity : AppCompatActivity() {
 
 //                Math.random() => 0~0.999999999 값이 랜덤으로 뜸.
 
-                val cutLine = unLuckyCount.toDouble() / totalCount.toDouble()
+                val cutLine = (unLuckyCount.toDouble() / totalCount.toDouble())
 
                 val randomVal = Math.random()
 
