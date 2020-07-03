@@ -27,5 +27,17 @@ class LotsActivity : AppCompatActivity() {
             peopleCount ++
             peopleCountTxt.text=peopleCount.toString()
         }
+
+        unluckyMinusBtn.setOnClickListener {
+            var unluckyCount = unluckyCountTxt.text.toString().toInt()
+            unluckyCount --
+            unluckyCountTxt.text=unluckyCount.toString()
+        }
+
+        unluckyPlusBtn.setOnClickListener {
+            var unluckyCount = unluckyCountTxt.text.toString().toInt()
+            unluckyCount ++
+            unluckyCountTxt.text=unluckyCount.toString()
+        }
     }
 }
