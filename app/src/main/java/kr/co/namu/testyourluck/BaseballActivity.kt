@@ -134,11 +134,20 @@ class BaseballActivity : AppCompatActivity() {
 //        구해낸 스트라이크 갯수와 볼 갯수로 컴퓨터 답장 출력하기
         val cpuMessage = "s:${strikeCount}, b:${ballCount} 입니다"
 
+//        컴퓨터의 답장을 0.7초 딜레이 넣기
+        Handler().postDelayed({
+
         chattingMessageList.add(ChattingMessage("CPU",cpuMessage))
 
         mChatAdapter.notifyDataSetChanged()
 
-        chattingListView.smoothScrollToPosition(chattingMessageList.size-1)
+        chattingListView.smoothScrollToPosition(chattingMessageList.size-1)}
+            ,700)
+
+
+//        정답 체크를 1.4초 후에 해 채팅이 이어지듯 보이게 하기
+
+        Handler().postDelayed({
 
 //        만약 3 스트라이크 일 경우 "정답" 출력후 종료시키기
 
@@ -159,7 +168,7 @@ class BaseballActivity : AppCompatActivity() {
             Toast.makeText(this,"이용해 주셔서 감사합니다.",Toast.LENGTH_SHORT).show()
 
 
-        }
+        }},1400)
 
 
 
