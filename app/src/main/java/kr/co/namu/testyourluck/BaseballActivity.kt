@@ -68,6 +68,10 @@ class BaseballActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+//            같은 값을 두번이상 넣을 일은 없다
+//            입력되어 있던 내용을 빈칸으로 변경
+            inputNumEdt.setText("")
+
 //            위 조건문 이후로는 무조건 숫자가 세자리임이 확인됨
 //            채팅 내용으로 띄워주기
 
