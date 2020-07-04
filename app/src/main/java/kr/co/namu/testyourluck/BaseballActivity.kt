@@ -59,9 +59,41 @@ class BaseballActivity : AppCompatActivity() {
 //            리스트뷰 화면 바닥으로 끌어내리기 => 새로 입력된 숫자가 보이게
             chattingListView.smoothScrollToPosition(chattingMessageList.size-1)
 
+//            몇 스트라이크 몇 볼인지 답장하기
+            checkStrikeAndBall(input)
+
+
         }
 
     }
+
+//          컴퓨터가 답장해주는 기능
+
+    fun checkStrikeAndBall(inputString: String){
+
+//        정답이 741 => 입력 145 인 경우 1스트라이크 1볼
+//        입력값을 숫자로 바꿔야
+
+        val inputNum = inputString.toInt()
+
+//        숫자를 다시 배열로 쪼개자
+
+        val userNumbers = ArrayList<Int>()
+
+        userNumbers.add(inputNum/100)
+        userNumbers.add((inputNum/10)%10)
+        userNumbers.add(inputNum%10)
+
+//        스트라이크 & 볼 갯수 파악
+        var strikeCount = 0;
+        var ballCount = 0;
+
+
+
+
+    }
+
+
 
 //    컴퓨터가 문제를 내주는 기능
 
