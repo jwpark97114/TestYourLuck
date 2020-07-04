@@ -1,4 +1,4 @@
 package kr.co.namu.testyourluck.datas
 
-class ChattingMessage {
+class ChattingMessage (val who:String, val content:String) {
 }
