@@ -56,6 +56,9 @@ class BaseballActivity : AppCompatActivity() {
 //            어댑터가 새로고침 해야 내용 반영
             mChatAdapter.notifyDataSetChanged()
 
+//            리스트뷰 화면 바닥으로 끌어내리기 => 새로 입력된 숫자가 보이게
+            chattingListView.smoothScrollToPosition(chattingMessageList.size-1)
+
         }
 
     }
