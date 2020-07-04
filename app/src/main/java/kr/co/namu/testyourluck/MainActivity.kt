@@ -11,12 +11,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         lotsBtn.setOnClickListener {
-            val myIntent = Intent(this,LotsActivity::class.java)
+            val myIntent = Intent(this, LotsActivity::class.java)
             startActivity(myIntent)
         }
+
         rpsBtn.setOnClickListener {
-            val myIntent = Intent(this,RockPaperScissorsActivity::class.java)
+            val myIntent = Intent(this, RockPaperScissorsActivity::class.java)
             startActivity(myIntent)
         }
+
+        baseballBtn.setOnClickListener {
+
+            val myIntent = Intent(this, BaseballActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
     }
 }

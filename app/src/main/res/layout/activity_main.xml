@@ -17,25 +17,30 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test your luck."
+        android:text="Test your luck!!"
         android:layout_marginTop="15dp"
         android:textSize="20sp"/>
 
-
     <Button
         android:id="@+id/lotsBtn"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="제비뽑기"/>
+        android:text="제비 뽑기" />
 
     <Button
         android:id="@+id/rpsBtn"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="컴퓨터와 가위바위보"/>
+        android:text="컴퓨터와 가위바위보" />
 
+    <Button
+        android:id="@+id/baseballBtn"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="숫자 야구 게임"/>
 
 
 </LinearLayout>
