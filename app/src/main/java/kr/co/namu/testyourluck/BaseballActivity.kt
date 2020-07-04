@@ -88,6 +88,33 @@ class BaseballActivity : AppCompatActivity() {
         var strikeCount = 0;
         var ballCount = 0;
 
+//        i가 내 숫자를 확인하는 역할
+        for(i in 0..2){
+
+//            j는 문제 숫자를 확인하는 역할
+            for(j in 0..2){
+
+//                두 칸에 적힌 숫자가 같은가?
+                if(userNumbers[i] == cpuNumbers[j]){
+//                    같다면 스크라이크인지 볼인지도 검사
+                    if(i==j){
+                        strikeCount++
+                    }
+                    else{
+                        ballCount++
+                    }
+                }
+            }
+        }
+
+//        구해낸 스트라이크 갯수와 볼 갯수로 컴퓨터 답장 출력하기
+        val cpuMessage = "s:${strikeCount}, b:${ballCount} 입니다"
+
+        chattingMessageList.add(ChattingMessage("CPU",cpuMessage))
+
+        mChatAdapter.notifyDataSetChanged()
+
+        chattingListView.smoothScrollToPosition(chattingMessageList.size-1)
 
 
 
