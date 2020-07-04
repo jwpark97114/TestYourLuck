@@ -61,6 +61,11 @@ class BaseballActivity : AppCompatActivity() {
 //            입력내용 확인
             val input = inputNumEdt.text.toString()
 
+
+//            같은 값을 두번이상 넣을 일은 없다
+//            입력되어 있던 내용을 빈칸으로 변경
+            inputNumEdt.setText("")
+
 //            3자리 아니면 거부
             if(input.length !=3){
                 Toast.makeText(this,"세자리 숫자로 입력하세요",Toast.LENGTH_SHORT).show()
@@ -68,9 +73,20 @@ class BaseballActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-//            같은 값을 두번이상 넣을 일은 없다
-//            입력되어 있던 내용을 빈칸으로 변경
-            inputNumEdt.setText("")
+//           세 자리 입력값중 중복된 숫자가 있다면 거부
+//           입력값의 세자리를 추출, 검사
+            val firstNum = input.toInt()/100
+            val secondNum = input.toInt()/10%10
+            val thirdNum = input.toInt()%10
+
+//            중복된 숫자 존재 여부 검사
+            if(firstNum == secondNum || secondNum == thirdNum || firstNum == thirdNum){
+                Toast.makeText(this,"중복된 숫자는 입력할 수 없습니다.",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+//
+
+
 
 //            위 조건문 이후로는 무조건 숫자가 세자리임이 확인됨
 //            채팅 내용으로 띄워주기
