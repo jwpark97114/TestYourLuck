@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+        lottoBtn.setOnClickListener {
+            val myIntent = Intent(this, LottoActivity::class.java)
+        }
 
     }
 }
